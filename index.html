@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head>  
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -12,6 +12,30 @@
       <header>
         <h1>Password Generator</h1>
       </header>
+
+      <div id="criteriaDiv">
+        <form>
+          <label for="uppercase">UPPERCASE</label><input type="checkbox" id="upperCheck" name="uppercase" value="uppercase"><br>
+          <label for="lowercase">lowercase</label><input type="checkbox" id="lowerCheck" name="lowercase" value="lowercase"><br>
+          <label for="numeric">Numeric</label><input type="checkbox" id="numCheck" name="numeric" value="numeric"><br>
+          <label for="symbol">Symbols (? ; [ ! ] )</label><input type="checkbox" id="symbCheck" name="symbol" value="symbol"><br>
+          
+          <!-- <label for="charLengthTextbox">Character Length: </label><input type="text" name="charLengthTextbox" value=""><br> -->
+          <!-- value="charLengthTextbox"> -->
+          <!-- TODO look for spinner -->
+          <label for="lengthSelect">Character Length: </label>
+          
+                    <input list="lengths" id="jawn" name="lengthSelect">
+                     <!--list="lengthSelect"-->
+                    <datalist id="lengths">
+                      <!--  list is populated via JS-->
+
+                    </datalist><br>
+
+          <button id="doneBtn" type="button">done</button>
+        </form>
+      </div>
+
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>

@@ -66,6 +66,16 @@ header {
   height: 2px;
 }
 
+#criteriaDiv {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  z-index: -1;
+  background-color: aqua;
+  top: 40%;
+  left: 40%;
+}
+
 .card-footer::after {
   content: " ";
   display: block;
