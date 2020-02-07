@@ -15,9 +15,9 @@
 
       <div id="criteriaDiv">
         <form>
-          <label for="uppercase">UPPERCASE</label><input type="checkbox" id="upperCheck" name="uppercase" value="uppercase"><br>
+          <label for="uppercase">UPPERCASE</label><input type="checkbox" id="upperCheck" name="uppercase" value="uppercase">
           <label for="lowercase">lowercase</label><input type="checkbox" id="lowerCheck" name="lowercase" value="lowercase"><br>
-          <label for="numeric">Numeric</label><input type="checkbox" id="numCheck" name="numeric" value="numeric"><br>
+          <label for="numeric">Numeric</label><input type="checkbox" id="numCheck" name="numeric" value="numeric">
           <label for="symbol">Symbols (? ; [ ! ] )</label><input type="checkbox" id="symbCheck" name="symbol" value="symbol"><br>
           
           <!-- <label for="charLengthTextbox">Character Length: </label><input type="text" name="charLengthTextbox" value=""><br> -->
@@ -25,14 +25,13 @@
           <!-- TODO look for spinner -->
           <label for="lengthSelect">Character Length: </label>
           
-                    <input list="lengths" id="jawn" name="lengthSelect">
-                     <!--list="lengthSelect"-->
+                    <input list="lengths" id="lengthsList" name="lengthSelect">
                     <datalist id="lengths">
                       <!--  list is populated via JS-->
-
                     </datalist><br>
 
           <button id="doneBtn" type="button">done</button>
+          <button type="reset">Reset</button>
         </form>
       </div>
 
