@@ -7,13 +7,21 @@
 The goal was to implement code that would generate a password, with a web page that was already given and a stylesheet. There was also some javascript that was provided. When the generate button was clicked, my job was to then prompt the user what kind of characters they wanted for their password (uppercase, lowercase, numeric, and symbols) and what the length of the password should be (between 8-128). Character specification is done through checkboxes and character length is done through a textbox that also has values listed. The application ensures that the user check at least one check box. It also checks to see that the user either has picked/typed a character length and that it is one that falls between 8-128. This is all done through a div that appears when the generate button is clicked. 
 
 
+[Link to Demo Video](https://drive.google.com/file/d/1JIRmYdO2dWlLpwlpUF70eELsAAQO783y/preview)
 
+### Steps taken in the video
+1. Clicked the generate button
 
-![GIF](https://drive.google.com/file/d/1arfwD5IBmvznJtzOiTLkC3hO7wVjeG3e/preview)
+2. The Div, that is responsible for having the user enter their criteria, has appeared.
 
-ideas - pictures of every step
-step one click generate
-step two enter criteria details --maybe show what happens when criteria is incorrect
-after done is clicked a password is generated in the given text area
-bonus: if you press enter another password is generated with the criteria given previously
-in order to generate a password with a new criteria click generate button again
+3. Proof of validation.
+    1. Did not select any boxes or enter a length - result: text appears at the bottom stating no boxes where checked
+    2. Checked a box but did not select/type a length - result: text appears at the bottomm stating there was a problem with the character lenght
+    2. Checked a box but selected/typed a length under 8 - result: text appears at the bottomm stating the same issue as before, since there was no reason for it to change.
+
+4. Criteria is entered correctly and the numeric checkbox was entered. The criteria div has gone away and we are presented with a randomly generated password. 
+
+5. Generate password is pressed again and so again the criteria div appears again. The uppercase and lowercase checkboxes are then selected (in addition to the already 
+checked numeric checkbox). The done button is pressed and another password is generated, but this time with the added criteria of characters.
+
+6. Once again the generated password button is clicked. The criteria div is once again presented. The reset button is clicked in order to demonstrate that it clears all input/activity on the form.
