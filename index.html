@@ -8,55 +8,72 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" id="blur">
       <header>
         <h1>Password Generator</h1>
       </header>
-
-      <div id="criteriaDiv">
-        <form>
-          <label for="uppercase">UPPERCASE</label><input type="checkbox" id="upperCheck" name="uppercase" value="uppercase">
-          <label for="lowercase">lowercase</label><input type="checkbox" id="lowerCheck" name="lowercase" value="lowercase"><br>
-          <label for="numeric">Numeric</label><input type="checkbox" id="numCheck" name="numeric" value="numeric">
-          <label for="symbol">Symbols (? ; [ ! ] )</label><input type="checkbox" id="symbCheck" name="symbol" value="symbol"><br>
-          
-          <!-- <label for="charLengthTextbox">Character Length: </label><input type="text" name="charLengthTextbox" value=""><br> -->
-          <!-- value="charLengthTextbox"> -->
-          <!-- TODO look for spinner -->
-          <label for="lengthSelect">Character Length: </label>
-          
-                    <input list="lengths" id="lengthsList" name="lengthSelect">
-                    <datalist id="lengths">
-                      <!--  list is populated via JS-->
-                    </datalist><br>
-
-          <button id="doneBtn" type="button">done</button>
-          <button type="reset">Reset</button>
-        </form>
-      </div>
 
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
-          <!--  -->
-          <!--  -->
-          <!--  -->
+          
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
-          <!--  -->
-          <!--  -->
-          <!--  -->
+          
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
+    </div>
+
+    <div id="criteriaDiv">
+      <form>        
+        <h3>Enter Your Criteria</h3>
+        <div class="formGroup">
+
+          <div class="formatCheckbox">
+            <label for="uppercase">UPPERCASE</label><input type="checkbox" id="upperCheck" name="uppercase"value="uppercase">
+          </div>
+
+          <div class="formatCheckbox">
+            <label for="lowercase">lowercase</label><input type="checkbox" id="lowerCheck" name="lowercase" value="lowercase"><br>
+          </div>
+        </div>
+
+        <div class="formGroup">
+          <div class="formatCheckbox">
+            <label for="numeric">Numeric</label><input type="checkbox" id="numCheck" name="numeric" value="numeric">
+          </div>
+
+          <div class="formatCheckbox">  
+            <label for="symbol">Symbols (? ; [ ! ] )</label><input type="checkbox" id="symbCheck" name="symbol" value="symbol"><br>
+          </div>
+        </div>
+        <!-- <label for="charLengthTextbox">Character Length: </label><input type="text" name="charLengthTextbox" value=""><br> -->
+        <!-- value="charLengthTextbox"> -->
+        <!-- TODO look for spinner -->
+        <div class="formGroup">
+        <label for="lengthSelect">Character Length (8-128): </label>
+        
+                  <input list="lengths" id="lengthsList" name="lengthSelect">
+                  <datalist id="lengths">
+                    <!--  list is populated via JS-->
+                  </datalist><br>
+                </div>
+                <div class="formGroup">
+        <button id="doneBtn" type="button">Done</button>
+        <button type="reset">Reset</button>
+      </div>
+        <p id="status"></p>
+                  
+      </form>
     </div>
     <script src="script.js"></script>
   </body>

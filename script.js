@@ -1,16 +1,19 @@
-console.log(document.querySelectorAll("form")[0].childNodes);
 var upperCheck = document.getElementById("upperCheck");
 var lowerCheck = document.getElementById("lowerCheck");
 var numCheck = document.getElementById("numCheck");
 var symbCheck = document.getElementById("symbCheck");  
-
+var criteriaDiv = document.getElementById("criteriaDiv");
+var blurPage = document.getElementById("blur");
 var listValues = document.getElementById("lengths");
-
 var lengthsList = document.getElementById("lengthsList");
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var doneBtn = document.querySelector("#doneBtn");
+
+var statusP = document.getElementById("status");
+
+var exceptionMessage;
 
 for(i = 8; i <= 128; i++){
   let newOP = document.createElement("OPTION");
@@ -18,19 +21,12 @@ for(i = 8; i <= 128; i++){
   listValues.appendChild(newOP);
 }
 
-// console.log(lengthsList.nextElementSibling.children[].value);
-console.log(lengthsList.nextElementSibling.childNodes);
-console.log(lengthsList.nextElementSibling.children[0]);
-
 doneBtn.addEventListener("click", function (){
-  //TODO comment
-  console.log("hhhh");
-  console.log(lengthsList.nextElementSibling.childNodes);
-  console.log(lengthsList.nextElementSibling.children[0]);
+  
   var criteriaIndexes = [];
   if(!checkCriteria()) {
     //triggers when criteria has no met the minimum  
-    console.log("something is wrong with your criteria");
+    statusP.textContent = exceptionMessage;
   } else {
           //if uppper is checked push 0 to the array
           if(upperCheck.checked === true){
@@ -48,8 +44,6 @@ doneBtn.addEventListener("click", function (){
           if(symbCheck.checked === true){
             criteriaIndexes.push(3);
           }
-  console.log(document.getElementById("lengthsList").value + " hello");
-  console.log(lengthsList.value + " hello");
   //everything should have went well, now the criteria to write the password
   writePassword(generatePassword(criteriaIndexes, lengthsList.value));
   reset();
@@ -59,32 +53,26 @@ doneBtn.addEventListener("click", function (){
 // Add event listener to generate button
 generateBtn.addEventListener("click", function(){
   //will reveal the div form responsible for prompting the user their criteria
-  // document.getElementById("criteriaDiv").style.zIndex = "-1";
-  console.log("show me the money");
-
- document.getElementById("criteriaDiv").style.zIndex = "0";
+  criteriaDiv.style.zIndex = "1";
+  blurPage.style.filter = "blur(4px)";
 });
 
 function checkCriteria(){
   if(!upperCheck.checked  && !lowerCheck.checked && !numCheck.checked && !symbCheck.checked){
     //if everything is unchecked return false
-    console.log("failed bc no boxes were checked");
+    exceptionMessage = "You did not select any checkboxes. At least one must be selected in order to generate your password.";
     return false;
-  } else if(lengthsList.value==="") {
+  } else if(lengthsList.value==="" || lengthsList.value < 8 || lengthsList.value > 128) {
     //if no value was entered into the list retrun false
-    console.log("failed bc of no length selected");
+    exceptionMessage = "There was a problem with your character length selection. Try again please.";
     return false;
   } else {
     //only when both these tests are passed will we return true
-    console.log("check function passed");
-    console.log(listValues.childElementCount);
     return true;
   }
 }
 
 function writePassword(password) {
-  alert(password);
-
   document.getElementById("password").textContent = password;
 }
 
@@ -109,7 +97,7 @@ function generatePassword(criteria, charL) {
             "0123456789",
             "!()?[]`~;:!#$%^&*+="];
 
-  for(i = 0; i <= charL; i++){
+  for(i = 0; i < charL; i++){
     /*
         will loop until all characters are written
         criteria comes in as an array [x, x, x]
@@ -118,15 +106,13 @@ function generatePassword(criteria, charL) {
     //we need to pick a string from the array. Then we will proceed to then pick a random character.
     //  pick a random element in char array.
     var randomElement = criteria[Math.floor(Math.random() * criteria.length)];
-    // char[Math.floor(Math.random() * charL)].charAt(Math.floor(Math.random() * ));
      passwordArr[i] = char[randomElement].charAt(Math.floor(Math.random() * char[randomElement].length));
-    //passwordArr.push(char[randomElement].charAt(3));//Math.floor(Math.random() * char[randomElement].length));
-    // alert(randomElement + " " + i);
   }
 return (passwordArr.join(""));
 //  https://www.sitepoint.com/javascript-fast-string-concatenation/
 }
 
 function reset(){
-  document.getElementById("criteriaDiv").style.zIndex = "-1";
+  criteriaDiv.style.zIndex = "-1";
+  blurPage.style.filter = "none";
 }

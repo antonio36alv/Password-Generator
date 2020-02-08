@@ -68,21 +68,35 @@ header {
 
 #criteriaDiv {
   position: absolute;
-  width: 40%;
-  height: 40%;
+  width: 35%;
+  height: auto;
   z-index: -1;
   background-color: #AF0808;
-  top: 25%;
-
-  /* vertical-align: bottom; */
+  top: 20%;
+  text-align: center;
   left: 30%;
   border-radius: 25px;
   border: black solid 5px;
+  margin: 0;
 }
 
-form:nth-child(1) {
-  border: white solid thin;
+.formGroup {
+  display: flex;  
+  text-align: right;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5px;
 }
+
+.formatCheckbox {
+  min-width: 40%;
+  border: thin black solid;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
 .card-footer::after {
   content: " ";
   display: block;
