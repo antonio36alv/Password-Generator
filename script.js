@@ -28,6 +28,7 @@ doneBtn.addEventListener("click", function (){
     //triggers when criteria has no met the minimum  
     statusP.textContent = exceptionMessage;
   } else {
+    statusP.textContent = "";
           //if uppper is checked push 0 to the array
           if(upperCheck.checked === true){
             criteriaIndexes.push(0);
