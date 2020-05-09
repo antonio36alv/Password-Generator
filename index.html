@@ -37,27 +37,28 @@
       <form>
         <button id="hide-button">X</button>
         <h3>Enter Your Criteria</h3>
-        <div class="formGroup">
+        <div id="criteria-fields">
+          
+          <div class="formGroup">
+            <div class="formatCheckbox">
+              <label for="uppercase">UPPERCASE</label><input type="checkbox" id="upperCheck" name="uppercase"value="uppercase">
+            </div>
 
-          <div class="formatCheckbox">
-            <label for="uppercase">UPPERCASE</label><input type="checkbox" id="upperCheck" name="uppercase"value="uppercase">
+            <div class="formatCheckbox">  
+              <label for="symbol">Symbols</label><input type="checkbox" id="symbCheck" name="symbol" value="symbol">
+            </div>
           </div>
 
-          <div class="formatCheckbox">
-            <label for="lowercase">lowercase</label><input type="checkbox" id="lowerCheck" name="lowercase" value="lowercase">
+          <div class="formGroup">
+            <div class="formatCheckbox">
+              <label for="lowercase">lowercase</label><input type="checkbox" id="lowerCheck" name="lowercase" value="lowercase">
+            </div>
+
+            <div class="formatCheckbox">
+              <label for="numeric">Numeric</label><input type="checkbox" id="numCheck" name="numeric" value="numeric">
+            </div>
           </div>
         </div>
-
-        <div class="formGroup">
-          <div class="formatCheckbox">
-            <label for="numeric">Numeric</label><input type="checkbox" id="numCheck" name="numeric" value="numeric">
-          </div>
-
-          <div class="formatCheckbox">  
-            <label for="symbol">Symbols (?*!)</label><input type="checkbox" id="symbCheck" name="symbol" value="symbol">
-          </div>
-        </div>
-        
         <div id="charGroup">
         
         <label for="lengthSelect">Character Length</label>

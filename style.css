@@ -100,9 +100,16 @@ header {
 #charGroup input {
   margin-top: 2px;
   margin-left: auto;
-  margin-right: auto;
-  
+  margin-right: auto;  
   max-width: 90%;
+}
+
+#criteria-fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
 }
 
 .formGroup, #btn-group {
@@ -110,6 +117,10 @@ header {
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 5px;
+}
+
+.formGroup {
+  flex-direction: column;
 }
 
 #btn-group {
