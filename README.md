@@ -26,6 +26,8 @@ checked numeric checkbox). The done button is pressed and another password is ge
 
 6. Once again the generated password button is clicked. The criteria div is once again presented. The reset button is clicked in order to demonstrate that it clears all input/activity on the form.
 
+7. Not demonstrated - The criteria div has an X button, that closes the div at anytime.
+
 ### Screenshots
 ---------------------
 #### Original Demo
