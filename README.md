@@ -2,9 +2,12 @@
 
 ![Badge](https://img.shields.io/badge/Javascript-ylel)
 
+[Password Generator - Deployed](https://antonio36alv.github.io/Password-Generator/)
+
+[My GitHub](https://github.com/antonio36alv)
+
 ## Project Description
 ----------------------------------------------------------------------------
-[Password Generator](https://antonio36alv.github.io/Password-Generator/)
 
 I was given html and css without any functionality. I was to provide the solution for creating a password generator. There was also some javascript that was provided. When the generate button was clicked, my job was to then prompt the user what kind of characters they wanted for their password (uppercase, lowercase, numeric, and symbols) and what the length of the password should be (between 8-128). Character specification is done through checkboxes and character length is done through a textbox that also has values listed. The application ensures that the user check at least one check box. It also checks to see that the user either has picked/typed a character length and that it is one that falls between 8-128. This is all done through a div that appears when the generate button is clicked. 
 
