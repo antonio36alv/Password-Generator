@@ -56,17 +56,16 @@
             <label for="symbol">Symbols (? ; [ ! ] )</label><input type="checkbox" id="symbCheck" name="symbol" value="symbol"><br>
           </div>
         </div>
-        <!-- <label for="charLengthTextbox">Character Length: </label><input type="text" name="charLengthTextbox" value=""><br> -->
-        <!-- value="charLengthTextbox"> -->
-        <!-- TODO look for spinner -->
-        <div class="formGroup">
-        <label for="lengthSelect">Character Length (8-128): </label>
         
+        <div id="charGroup">
+        
+        <label for="lengthSelect">Character Length (8-128): </label>
                   <input list="lengths" id="lengthsList" name="lengthSelect">
                   <datalist id="lengths">
                     <!--  list is populated via JS-->
-                  </datalist><br>
-                </div>
+                  </datalist>
+                  <br>
+        </div>
                 <div class="formGroup">
         <button id="doneBtn" type="button">Done</button>
         <button type="reset">Reset</button>
