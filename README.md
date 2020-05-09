@@ -25,3 +25,22 @@ The goal was to implement code that would generate a password, with a web page t
 checked numeric checkbox). The done button is pressed and another password is generated, but this time with the added criteria of characters.
 
 6. Once again the generated password button is clicked. The criteria div is once again presented. The reset button is clicked in order to demonstrate that it clears all input/activity on the form.
+
+### Screenshots
+---------------------
+#### Original Demo
+![Original Demo](https://antonio36alv.github.io/Password-Generator/images/03-javascript-homework-demo.png)
+
+#### Before Any Interaction
+![Origin](https://antonio36alv.github.io/Password-Generator/images/origin.PNG)
+
+#### After Pressing the Generate Button
+![After Generate](https://antonio36alv.github.io/Password-Generator/images/afterGenerate.PNG)
+
+#### Validation
+![Validation](https://antonio36alv.github.io/Password-Generator/images/validation.PNG)
+
+![Test Criteria/Validation](https://antonio36alv.github.io/Password-Generator/images/testCriteria.PNG)
+
+#### Result/Generated Password
+![Result](https://antonio36alv.github.io/Password-Generator/images/result.PNG)
