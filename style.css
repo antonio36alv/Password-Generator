@@ -80,6 +80,15 @@ header {
   margin: 0;
 }
 
+#hide-button {
+  outline: none;
+  background-color: inherit;
+  border: none;
+  margin-left: 90%;
+  font-weight: 400;
+  font-size: medium;
+}
+
 #charGroup {
 
   display: flex;
@@ -88,16 +97,20 @@ header {
 }
 
 #charGroup input {
+  margin-top: 2px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.formGroup {
-  display: flex;  
-  
+.formGroup, #btn-group {
+  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 5px;
+}
+
+#btn-group {
+  justify-content: space-evenly;
 }
 
 .formatCheckbox {
