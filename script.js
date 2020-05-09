@@ -54,6 +54,7 @@ doneBtn.addEventListener("click", function (){
 // Add event listener to generate button
 generateBtn.addEventListener("click", function(){
   //will reveal the div form responsible for prompting the user their criteria
+  criteriaDiv.style.display = "block"
   criteriaDiv.style.zIndex = "1";
   blurPage.style.filter = "blur(4px)";
 });
