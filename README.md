@@ -31,9 +31,6 @@ checked numeric checkbox). The done button is pressed and another password is ge
 #### Original Demo
 ![Original Demo](https://antonio36alv.github.io/Password-Generator/images/03-javascript-homework-demo.png)
 
-#### Before Any Interaction
-![Origin](https://antonio36alv.github.io/Password-Generator/images/origin.PNG)
-
 #### After Pressing the Generate Button
 ![After Generate](https://antonio36alv.github.io/Password-Generator/images/afterGenerate.PNG)
 
