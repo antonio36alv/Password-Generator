@@ -1,5 +1,7 @@
 # Password-Generator
 
+![Badge](https://img.shields.io/badge/Javascript-ylel)
+
 ## Project Description
 ----------------------------------------------------------------------------
 [Password Generator](https://antonio36alv.github.io/Password-Generator/)
